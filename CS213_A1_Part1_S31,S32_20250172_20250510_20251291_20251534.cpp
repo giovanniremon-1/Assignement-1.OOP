@@ -214,8 +214,8 @@ void Resizing_Image(Image& ima, const string& filename) {
     float scale_height = (float)ima.height / height;
     for (int i = 0; i < width; i++) {
         for (int j = 0; j < height; j++) {
-            int origin_width = round(i * scale_width); if (origin_width >= ima.width) origin_width = ima.width - 1;
-            int origin_height = round(j * scale_height); if (origin_height >= ima.height) origin_height = ima.height - 1;
+            int origin_width = i * scale_width; if (origin_width >= ima.width) origin_width = ima.width - 1;
+            int origin_height = j * scale_height; if (origin_height >= ima.height) origin_height = ima.height - 1;
             for (int k = 0; k < 3; k++) {
                 resized(i, j, k) = ima(origin_width, origin_height, k);
             }
@@ -223,6 +223,66 @@ void Resizing_Image(Image& ima, const string& filename) {
     }
     string new_name = filenaming(filename);
     resized.saveImage(new_name);
+}
+
+Image Resizing_Image(Image& ima, int& width, int& height) {
+    Image resized(width, height);
+    float scale_width = (float)ima.width / width;
+    float scale_height = (float)ima.height / height;
+    for (int i = 0; i < width; i++) {
+        int origin_width = i * scale_width; if (origin_width >= ima.width) origin_width = ima.width - 1;
+        for (int j = 0; j < height; j++) {
+            int origin_height = j * scale_height; if (origin_height >= ima.height) origin_height = ima.height - 1;
+            for (int k = 0; k < 3; k++) {
+                resized(i, j, k) = ima(origin_width, origin_height, k);
+            }
+        }
+    }
+    return resized;
+}
+
+Image Merge(Image& merged, Image& ima, Image& second_ima) {
+    for (int i = 0; i < ima.width; i++) {
+        for (int j = 0; j < ima.height; j++) {
+            for (int k = 0; k < ima.channels; k++) {
+                merged(i, j, k) = (ima(i, j, k) + second_ima(i,j,k)) / 2;
+            }
+        }
+    }
+    return merged;
+}
+
+void Merge_Images(Image& ima, Image& second_ima, const string& filename) {
+    if (ima.width == second_ima.width && ima.height == second_ima.height) {
+        Image merged(ima.width, ima.height);
+        merged = Merge(merged, ima, second_ima);
+        string new_name = filenaming(filename);
+        merged.saveImage(new_name);
+    }
+    else {
+        cout << "Choose if you want to resize the two images or intersect them :";
+        string choosen;
+        cin >> choosen;
+        if (choosen == "resize") {
+            int width = max(ima.width, second_ima.width);
+            int height = max(ima.height, second_ima.height);
+            ima = Resizing_Image(ima, width, height);
+            second_ima = Resizing_Image(second_ima, width, height);
+            Image merged(width, height);
+            merged = Merge(merged, ima, second_ima);
+            string new_name = filenaming(filename);
+            merged.saveImage(new_name);
+        }
+        else if (choosen == "intersect") {
+            int width = min(ima.width, second_ima.width);
+            int height = min(ima.height, second_ima.height);
+            Image merged(width, height);
+            Merge(merged, ima, second_ima);
+            merged = Merge(merged, ima, second_ima);
+            string new_name = filenaming(filename);
+            merged.saveImage(new_name);
+        }
+    }
 }
 
 int main()
@@ -237,10 +297,11 @@ int main()
         << "6. Rotate Image. " << endl
         << "7. Darker or Lighter. " << endl
         << "8. Resizing Image. " << endl
-        << "9. Exit." << endl
+        << "9. Merge Images" << endl
+        << "0. Exit." << endl
         << "Enter your choice:";
         cin >> x;
-        if (x == 9)
+        if (x == 0)
         {
             return 0;
         }
@@ -278,6 +339,14 @@ int main()
         }
         else if (x == 8) {
             Resizing_Image(ima, filename);
+        }
+        else if (x == 9)
+        {
+            string second_filename;
+            cout << "Enter your second file name :";
+            cin >> second_filename;
+            Image second_ima(second_filename);
+            Merge_Images(ima, second_ima, filename);
         }
         cout << endl << "---Edited successfully---" << endl << endl;
     }
