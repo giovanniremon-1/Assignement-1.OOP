@@ -11,6 +11,7 @@ FCAI – OOP Assignment 1 – 2026/2027
 
 #include <string>
 #include <cmath>
+#include <vector>
 #include "Image_Class.h"
 using namespace std;
 
