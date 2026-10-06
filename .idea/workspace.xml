@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BackendCodeEditorMiscSettings">
+    <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexedValue" value="true" type="bool" />
+    <option name="/Default/Housekeeping/GlobalSettingsUpgraded/IsUpgraded/@EntryValue" value="true" type="bool" />
+    <option name="/Default/Housekeeping/LiveTemplatesHousekeeping/HotspotSessionHintIsShown/@EntryValue" value="true" type="bool" />
+    <option name="/Default/RiderDebugger/RiderRestoreDecompile/RestoreDecompileSetting/@EntryValue" value="false" type="bool" />
+  </component>
+  <component name="CMakePresetLoader">{
+  &quot;useNewFormat&quot;: true
+}</component>
+  <component name="CMakeProjectFlavorService">
+    <option name="flavorId" value="CMakePlainProjectFlavor" />
+  </component>
+  <component name="CMakeReloadState">
+    <option name="reloaded" value="true" />
+  </component>
+  <component name="CMakeRunConfigurationManager">
+    <generated>
+      <config projectName="untitled" targetName="untitled" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="610d0381-559a-478a-9009-12bf4b8fc123" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/CS213_A1_Part1_S31,S32_20250172_20250510_20251291_20251534.exe" beforeDir="false" afterPath="$PROJECT_DIR$/CS213_A1_Part1_S31,S32_20250172_20250510_20251291_20251534.exe" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/CS213_A1_Part1_S31,S32_20250172_20250510_20251291_20251534.cpp" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="qRNGuHzw" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectApplicationVersion">
+    <option name="ide" value="CLion" />
+    <option name="majorVersion" value="2025" />
+    <option name="minorVersion" value="3.2" />
+    <option name="productBranch" value="Classic" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="3AMdOFsmvNQxJQfTQNaBn6NCVlc" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;C/C++ File.OOP_University.cpp.executor&quot;: &quot;Run&quot;,
+    &quot;C/C++ File.OOP_University.executor&quot;: &quot;Run&quot;,
+    &quot;C/C++ File.main.cpp.executor&quot;: &quot;Run&quot;,
+    &quot;CMake Application.untitled.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.RadMigrateCodeStyle&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.west.config.association.type.startup.service&quot;: &quot;true&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/My Laptop/CLionProjects/OOP_University/CS213_A1_Part1_S31,S32_20250172_20250510_20251291_20251534.cpp&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/My Laptop/CLionProjects/untitled/main.cpp&quot;,
+    &quot;org.rust.first.attach.projects&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\My Laptop\CLionProjects\OOP_University" />
+      <recent name="C:\Users\My Laptop\CLionProjects\OOP_University\cmake-build-debug\CMakeFiles" />
+      <recent name="C:\Users\My Laptop\CLionProjects\untitled\cmake-build-debug" />
+      <recent name="C:\Users\My Laptop\CLionProjects\untitled" />
+      <recent name="C:\Users\My Laptop\CLionProjects\untitled\Header" />
+    </key>
+  </component>
+  <component name="RunManager" selected="C/C++ File.OOP_University.cpp">
+    <configuration name="OOP_UNiversity" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" RUN_PATH="OOP_University" EXPLICIT_BUILD_TARGET_NAME="all">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OOP_University.cpp" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="OOP_University" TARGET_NAME="OOP_University.cpp" CONFIG_NAME="OOP_University.cpp">
+      <option name="sourceFile" value="CS213_A1_Part1_S31,S32_20250172_20250510_20251291_20251534.cpp" />
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="main.cpp" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="OOP_University" TARGET_NAME="main.cpp" CONFIG_NAME="main.cpp">
+      <option name="sourceFile" value="main.cpp" />
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="C/C++ File.OOP_University.cpp" />
+      <item itemvalue="C/C++ File.main.cpp" />
+      <item itemvalue="CMake Application.OOP_UNiversity" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="C/C++ File.main.cpp" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="610d0381-559a-478a-9009-12bf4b8fc123" name="Changes" comment="" />
+      <created>1772406340394</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1772406340394</updated>
+      <workItem from="1772406342288" duration="322000" />
+      <workItem from="1772437671333" duration="3801000" />
+      <workItem from="1772447617478" duration="1422000" />
+      <workItem from="1772454193893" duration="751000" />
+      <workItem from="1772461672239" duration="2035000" />
+      <workItem from="1772464850070" duration="1786000" />
+      <workItem from="1772467611624" duration="7459000" />
+      <workItem from="1772480531843" duration="3569000" />
+      <workItem from="1772492579099" duration="7000" />
+      <workItem from="1772534686353" duration="332000" />
+      <workItem from="1772623366496" duration="7000" />
+      <workItem from="1772647452645" duration="6529000" />
+      <workItem from="1772665739181" duration="2246000" />
+      <workItem from="1772711752660" duration="4898000" />
+      <workItem from="1772723789413" duration="2892000" />
+      <workItem from="1772726947692" duration="8513000" />
+      <workItem from="1772744662460" duration="1123000" />
+      <workItem from="1772792184747" duration="2553000" />
+      <workItem from="1772815395730" duration="706000" />
+      <workItem from="1772898884451" duration="1092000" />
+      <workItem from="1773062254886" duration="14911000" />
+      <workItem from="1773163019923" duration="2049000" />
+      <workItem from="1773228002608" duration="7452000" />
+      <workItem from="1773256957142" duration="4068000" />
+      <workItem from="1773312678011" duration="5000" />
+      <workItem from="1773326877005" duration="10000" />
+      <workItem from="1773330486326" duration="2512000" />
+      <workItem from="1773398361018" duration="1250000" />
+      <workItem from="1773474901742" duration="4417000" />
+      <workItem from="1773489366040" duration="1145000" />
+      <workItem from="1773500051179" duration="2918000" />
+      <workItem from="1773846874363" duration="1391000" />
+      <workItem from="1773869560967" duration="1764000" />
+      <workItem from="1774209034834" duration="58000" />
+      <workItem from="1774209128667" duration="1753000" />
+      <workItem from="1774212825227" duration="7470000" />
+      <workItem from="1774257850025" duration="7015000" />
+      <workItem from="1774983525698" duration="4618000" />
+      <workItem from="1775072161267" duration="10767000" />
+      <workItem from="1775168265889" duration="5442000" />
+      <workItem from="1775329503920" duration="875000" />
+      <workItem from="1775849200334" duration="4000" />
+      <workItem from="1776194308072" duration="7089000" />
+      <workItem from="1776271617317" duration="2000" />
+      <workItem from="1776526553831" duration="10663000" />
+      <workItem from="1776788647978" duration="4244000" />
+      <workItem from="1776879640625" duration="3355000" />
+      <workItem from="1777152819585" duration="3230000" />
+      <workItem from="1777829046140" duration="1417000" />
+      <workItem from="1778077120562" duration="922000" />
+      <workItem from="1780773903974" duration="7548000" />
+      <workItem from="1780785857332" duration="655000" />
+      <workItem from="1784237295396" duration="4000" />
+      <workItem from="1790540435777" duration="7194000" />
+      <workItem from="1790709555316" duration="38634000" />
+      <workItem from="1790879813583" duration="415000" />
+      <workItem from="1790881411330" duration="42000" />
+      <workItem from="1790883128735" duration="320000" />
+      <workItem from="1791005598214" duration="182000" />
+      <workItem from="1791005838504" duration="250000" />
+      <workItem from="1791006126133" duration="864000" />
+      <workItem from="1791007048735" duration="5237000" />
+      <workItem from="1791181277250" duration="9827000" />
+      <workItem from="1791278328852" duration="848000" />
+      <workItem from="1791279521277" duration="198000" />
+      <workItem from="1791279783137" duration="1529000" />
+      <workItem from="1791281333005" duration="506000" />
+      <workItem from="1791282101711" duration="22000" />
+      <workItem from="1791282127824" duration="6919000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VCPKGProject">
+    <isAutomaticCheckingOnLaunch value="false" />
+    <isAutomaticFoundErrors value="true" />
+    <isAutomaticReloadCMake value="true" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
