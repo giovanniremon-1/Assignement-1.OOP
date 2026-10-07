@@ -325,7 +325,8 @@ void Edge_Detection(Image& ima, const string& filename) {
 }
 
 void Blur_Image(Image& ima, int& blur_Level, const string& filename) {
-    Image originalImg = ima;
+    Image originalImg(ima.width, ima.height);
+    originalImg = ima;
     for (int y = 0; y < ima.height; ++y) {
         for (int x = 0; x < ima.width; ++x) {
 
@@ -338,7 +339,7 @@ void Blur_Image(Image& ima, int& blur_Level, const string& filename) {
                 for (int dx = -blur_Level; dx <= blur_Level; ++dx) {
                     int neighborX = x + dx;
                     int neighborY = y + dy;
-                    if (neighborX >= 0 && neighborX < width && neighborY >= 0 && neighborY < height) {
+                    if (neighborX >= 0 && neighborX < ima.width && neighborY >= 0 && neighborY < ima.height) {
                         redSum += originalImg(neighborX, neighborY, 0);
                         greenSum += originalImg(neighborX, neighborY, 1);
                         blueSum += originalImg(neighborX, neighborY, 2);
@@ -347,11 +348,13 @@ void Blur_Image(Image& ima, int& blur_Level, const string& filename) {
                     }
                 }
             }
-            img(x, y, 0) = redSum / pixelCount;     
-            img(x, y, 1) = greenSum / pixelCount;   
-            img(x, y, 2) = blueSum / pixelCount;    
+            ima(x, y, 0) = redSum / pixelCount;
+            ima(x, y, 1) = greenSum / pixelCount;
+            ima(x, y, 2) = blueSum / pixelCount;
         }
     }
+    string new_name = filenaming(filename);
+    ima.saveImage(new_name);
 }
 
 void Wano_Brightness(Image& ima, const string& filename) {
