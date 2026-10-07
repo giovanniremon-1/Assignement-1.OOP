@@ -186,15 +186,11 @@ string filenaming(const string& filename) {
     cout << "Darker or Lighter: ";
     cin >> choosen;
     for ( int i = 0; i <ima.width; i++) {
-
         for ( int j = 0; j <ima.height; j++) {
-
             for ( int k = 0; k <ima.channels; k++) {
-
                 if (choosen == "darker") {
                     ima(i,j,k) = ima(i,j,k) * 0.5;
                 }
-
                 else if (choosen == "lighter") {
                     ima(i, j, k) = ima(i, j, k) + (255 - ima(i, j, k)) * 0.5;
                 }
@@ -389,7 +385,7 @@ Image Merge(Image& merged, Image& ima, Image& second_ima) {
 }
 
 /*17*/void Skewing_Image(Image& ima, float& degree, const string& filename) {
-    float radian = degree * M_PI / 180;
+    float radian = degree * (M_PI / 180);
     float tangent = tan(radian);
     int max_shift = abs(ima.height * tangent);
     int new_width = ima.width + max_shift;
