@@ -285,29 +285,45 @@ void Merge_Images(Image& ima, Image& second_ima, const string& filename) {
     }
 }
 
+void Wano_Brightness(Image& ima, const string& filename) {
+    int brightness = 50;
+    for (int i = 0; i < ima.width; i++) {
+        for (int j = 0; j < ima.height; j++) {
+            for (int k = 0; k < ima.channels; k++) {
+                int new_value = ima(i, j, k) + brightness;
+                if (new_value > 255) new_value = 255;
+                ima(i, j, k) = new_value;
+            }
+        }
+    }
+    string new_name = filenaming(filename);
+    ima.saveImage(new_name);
+}
+
 int main()
 {
     while (true) {
         int x;
-        cout << "1. Grayscale conversion. " << endl
-        << "2. Black and White. " << endl
-        << "3. Invert Image. " << endl
-        << "4. Adding a Frame to the Picture. " << endl
-        << "5. Flip image. " << endl
-        << "6. Rotate Image. " << endl
-        << "7. Darker or Lighter. " << endl
-        << "8. Resizing Image. " << endl
-        << "9. Merge Images" << endl
-        << "0. Exit." << endl
+        cout << "1. Grayscale conversion." << endl
+        << "2. Black and White." << endl
+        << "3. Invert Image." << endl
+        << "4. Adding a Frame to the Picture. 13. Brightness." << endl
+        << "5. Flip image." << endl
+        << "6. Rotate Image." << endl
+        << "7. Darker or Lighter." << endl
+        << "8. Resizing Image." << endl
+        << "9. Merge Images." << endl
+        << "\t\t0. Exit." << endl
         << "Enter your choice:";
         cin >> x;
+        cin.ignore();
         if (x == 0)
         {
             return 0;
         }
         string filename;
         cout << "Enter your image filename (e.g.,filename.jpg):";
-        cin >> filename;
+        getline(cin, filename);
         Image ima(filename);
         if (x == 1)
         {
@@ -347,6 +363,9 @@ int main()
             cin >> second_filename;
             Image second_ima(second_filename);
             Merge_Images(ima, second_ima, filename);
+        }
+        else if (x == 13) {
+            Wano_Brightness(ima, filename);
         }
         cout << endl << "---Edited successfully---" << endl << endl;
     }
