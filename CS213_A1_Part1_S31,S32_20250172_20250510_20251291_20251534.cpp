@@ -324,6 +324,36 @@ void Edge_Detection(Image& ima, const string& filename) {
     edge.saveImage(new_name);
 }
 
+void Blur_Image(Image& ima, int& blur_Level, const string& filename) {
+    Image originalImg = ima;
+    for (int y = 0; y < ima.height; ++y) {
+        for (int x = 0; x < ima.width; ++x) {
+
+            long long redSum = 0;
+            long long greenSum = 0;
+            long long blueSum = 0;
+
+            int pixelCount = 0;
+            for (int dy = -blur_Level; dy <= blur_Level; ++dy) {
+                for (int dx = -blur_Level; dx <= blur_Level; ++dx) {
+                    int neighborX = x + dx;
+                    int neighborY = y + dy;
+                    if (neighborX >= 0 && neighborX < width && neighborY >= 0 && neighborY < height) {
+                        redSum += originalImg(neighborX, neighborY, 0);
+                        greenSum += originalImg(neighborX, neighborY, 1);
+                        blueSum += originalImg(neighborX, neighborY, 2);
+                        
+                        pixelCount++;
+                    }
+                }
+            }
+            img(x, y, 0) = redSum / pixelCount;     
+            img(x, y, 1) = greenSum / pixelCount;   
+            img(x, y, 2) = blueSum / pixelCount;    
+        }
+    }
+}
+
 void Wano_Brightness(Image& ima, const string& filename) {
     int brightness = 50;
     for (int i = 0; i < ima.width; i++) {
@@ -433,6 +463,12 @@ int main()
         }
         else if (x == 10) {
             Edge_Detection(ima, filename);
+        }
+        else if (x == 12) {
+            cout << "Enter the blur level :";
+            int blur_level;
+            cin >> blur_level;
+            Blur_Image(ima, blur_level, filename);
         }
         else if (x == 13) {
             Wano_Brightness(ima, filename);
