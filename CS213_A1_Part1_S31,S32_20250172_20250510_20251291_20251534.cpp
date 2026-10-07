@@ -432,7 +432,7 @@ int main()
             Merge_Images(ima, second_ima, filename);
         }
         else if (x == 10) {
-            Edge_detection(ima, filename);
+            Edge_Detection(ima, filename);
         }
         else if (x == 13) {
             Wano_Brightness(ima, filename);
