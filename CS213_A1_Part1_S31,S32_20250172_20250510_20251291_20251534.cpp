@@ -11,6 +11,7 @@ FCAI – OOP Assignment 1 – 2026/2027
 
 #include <string>
 #include <cmath>
+#include <algorithm>
 #include "Image_Class.h"
 using namespace std;
 
@@ -300,20 +301,48 @@ void Wano_Brightness(Image& ima, const string& filename) {
     ima.saveImage(new_name);
 }
 
+void Skewing_Image(Image& ima, float& degree, const string& filename) {
+    float radian = degree * M_PI / 180;
+    float tangent = tan(radian);
+    int max_shift = abs(ima.height * tangent);
+    int new_width = ima.width + max_shift;
+    Image skewed(new_width, ima.height);
+    for (int i = 0; i < new_width; i++) {
+        for (int j = 0; j < ima.height; j++) {
+            for (int k = 0; k < ima.channels; k++) {
+                skewed(i, j, k) = 255;
+            }
+        }
+    }
+    for (int i = 0; i < ima.height; i++) {
+        int shift = (ima.height - 1 - i) * tangent;
+        for (int j = 0; j < ima.width; j++) {
+            int new_j = j + shift;
+            if (new_j >= 0 && new_j < new_width) {
+                for (int k = 0; k < ima.channels; k++) {
+                    skewed(new_j, i, k) = ima( j, i, k);
+                }
+            }
+        }
+    }
+    string new_name = filenaming(filename);
+    skewed.saveImage(new_name);
+}
+
 int main()
 {
     while (true) {
         int x;
-        cout << "1. Grayscale conversion." << endl
-        << "2. Black and White." << endl
-        << "3. Invert Image." << endl
-        << "4. Adding a Frame to the Picture. 13. Brightness." << endl
-        << "5. Flip image." << endl
-        << "6. Rotate Image." << endl
-        << "7. Darker or Lighter." << endl
-        << "8. Resizing Image." << endl
-        << "9. Merge Images." << endl
-        << "\t\t0. Exit." << endl
+        cout << "1. Grayscale conversion.                10. Detect Image edges." << endl
+        << "2. Black and White.                     11. Crop Image." << endl
+        << "3. Invert Image.                        12. Blur Image." << endl
+        << "4. Adding a Frame to the Picture.       13. Brightness." << endl
+        << "5. Flip Image.                          14. Old TV view." << endl
+        << "6. Rotate Image.                        15. Purple Image." << endl
+        << "7. Darker or Lighter.                   16. Infrared Image." << endl
+        << "8. Resizing Image.                      17. Skewing Image." << endl
+        << "9. Merge Images.                        18. Oil painting." << endl
+        << "\t\t\t0. Exit." << endl
         << "Enter your choice:";
         cin >> x;
         cin.ignore();
@@ -366,6 +395,12 @@ int main()
         }
         else if (x == 13) {
             Wano_Brightness(ima, filename);
+        }
+        else if (x == 17) {
+            cout << "Enter the skewness degree :";
+            float degree;
+            cin >> degree;
+            Skewing_Image(ima, degree, filename);
         }
         cout << endl << "---Edited successfully---" << endl << endl;
     }
