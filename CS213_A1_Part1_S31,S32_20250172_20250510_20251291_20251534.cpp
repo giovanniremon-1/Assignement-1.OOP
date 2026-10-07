@@ -344,7 +344,7 @@ void Old_TV_View(Image& ima, const string& filename) {
         for (int j = 0; j < ima.height; j++) {
             if (j % 20 == 0 || j % 20 == 1) {
                 ima(i, j, 0) = ima(i, j, 0) * 0.5;
-                ima(i, j, 1) = imai, j, 1) * 0.5;
+                ima(i, j, 1) = ima(i, j, 1) * 0.5;
                 ima(i, j, 2) = ima(i, j, 2) * 0.5;
             }
             if (i % 10 == 0) {
