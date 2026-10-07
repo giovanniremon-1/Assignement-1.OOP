@@ -4,7 +4,7 @@ FCAI – OOP Assignment 1 – 2026/2027
   Team Members:
     - Member 1: Geovanni Raymond    20250172    filters: 1, 5, 9, 13
     - Member 2: Mathieu Zaher       20250510    filters: 2, 6, 10, 14
-    - Member 3: Karim Tarek        20251291    filters: 3, 7, 11, 15
+    - Member 3: Karim Tarek         20251291    filters: 3, 7, 11, 15
     - Member 4: Retage Walid        20251534    filters: 4, 8, 12, 16
   Lab: S31,S32
 */
@@ -292,7 +292,7 @@ void Edge_Detection(Image& ima, const string& filename) {
     for (int i = 1; i < ima.width - 1; i++) {
         for (int j = 1; j < ima.height - 1; j++) {
             int current = (ima(i,j,0) + ima(i,j,1) + ima(i,j,2)) / 3;
-            int right = (ima(i+1,j,0) + ima(i+1,j,1) + ima(i+1,j,2)) / 3
+            int right = (ima(i+1,j,0) + ima(i+1,j,1) + ima(i+1,j,2)) / 3;
             int down = (ima(i,j+1,0) + ima(i,j+1,1) + ima(i,j+1,2)) / 3;
             int diffRight = abs(current - right);
             int diffDown = abs(current - down);
@@ -353,6 +353,23 @@ void Wano_Brightness(Image& ima, const string& filename) {
                 int new_value = ima(i, j, k) + brightness;
                 if (new_value > 255) new_value = 255;
                 ima(i, j, k) = new_value;
+            }
+        }
+    }
+    string new_name = filenaming(filename);
+    ima.saveImage(new_name);
+}
+
+void Old_TV_View(Image& ima, const string& filename) {
+    for (int i = 0; i < ima.width; i++) {
+        for (int j = 0; j < ima.height; j++) {
+            if (j % 20 == 0 || j % 20 == 1) {
+                ima(i, j, 0) = ima(i, j, 0) * 0.5;
+                ima(i, j, 1) = ima(i, j, 1) * 0.5;
+                ima(i, j, 2) = ima(i, j, 2) * 0.5;
+            }
+            if (i % 10 == 0) {
+                ima(i, j, 0) = min(255, ima(i, j, 0) + 10);
             }
         }
     }
@@ -463,6 +480,9 @@ int main()
         }
         else if (x == 13) {
             Wano_Brightness(ima, filename);
+        }
+        else if (x == 14) {
+            Old_TV_View(ima, filename);
         }
         else if (x == 17) {
             cout << "Enter the skewness degree :";
