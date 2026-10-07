@@ -285,6 +285,44 @@ void Merge_Images(Image& ima, Image& second_ima, const string& filename) {
     }
 }
 
+void Edge_Detection(Image& ima, const string& filename) {
+    Image edge(ima.width, ima.height);
+    int threshold = 30;
+
+    for (int i = 1; i < ima.width - 1; i++)
+    {
+        for (int j = 1; j < ima.height - 1; j++)
+        {
+            int current =
+                (ima(i,j,0) + ima(i,j,1) + ima(i,j,2)) / 3;
+
+            int right =
+                (ima(i+1,j,0) + ima(i+1,j,1) + ima(i+1,j,2)) / 3;
+
+            int down =
+                (ima(i,j+1,0) + ima(i,j+1,1) + ima(i,j+1,2)) / 3;
+
+            int diffRight = abs(current - right);
+            int diffDown = abs(current - down);
+
+            if (diffRight > threshold || diffDown > threshold)
+            {
+                edge(i,j,0) = 0;
+                edge(i,j,1) = 0;
+                edge(i,j,2) = 0;
+            }
+            else
+            {
+                edge(i,j,0) = 255;
+                edge(i,j,1) = 255;
+                edge(i,j,2) = 255;
+            }
+        }
+    }
+    string new_name = filenaming(filename);
+    edge.saveImage(new_name);
+}
+
 void Wano_Brightness(Image& ima, const string& filename) {
     int brightness = 50;
     for (int i = 0; i < ima.width; i++) {
@@ -363,6 +401,9 @@ int main()
             cin >> second_filename;
             Image second_ima(second_filename);
             Merge_Images(ima, second_ima, filename);
+        }
+        else if (x == 10) {
+            Edge_detection(ima, filename);
         }
         else if (x == 13) {
             Wano_Brightness(ima, filename);
