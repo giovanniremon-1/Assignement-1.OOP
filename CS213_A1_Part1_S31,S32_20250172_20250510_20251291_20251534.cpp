@@ -28,7 +28,7 @@ string filenaming(const string& filename) {
     return s2;
 }
 
-void Grayscale_Conversion(Image& ima, const string& filename) {
+/*1*/void Grayscale_Conversion(Image& ima, const string& filename) {
     int sum = 0;
     int average = 0;
     for (int i = 0; i < ima.width; i++) {
@@ -47,7 +47,7 @@ void Grayscale_Conversion(Image& ima, const string& filename) {
     ima.saveImage(new_name);
 }
 
-void Black_and_White(Image& ima, const string& filename) {
+/*2*/void Black_and_White(Image& ima, const string& filename) {
     int sum = 0;
     int average = 0;
     for (int i = 0; i < ima.width; i++) {
@@ -73,7 +73,7 @@ void Black_and_White(Image& ima, const string& filename) {
     ima.saveImage(new_name);
 }
 
-void Invert_Image(Image &ima, const string& filename) {
+/*3*/void Invert_Image(Image &ima, const string& filename) {
     for ( int i = 0; i < ima.width; i++) {
         for ( int j = 0; j < ima.height; j++) {
             for ( int k = 0; k < ima.channels; k++) {
@@ -85,7 +85,7 @@ void Invert_Image(Image &ima, const string& filename) {
     ima.saveImage(new_name);
 }
 
-void Frame(Image& ima, const string& filename) {
+/*4*/void Frame(Image& ima, const string& filename) {
     int frame = 20;
     for (int i = 0; i < ima.width; i++) {
         for (int j = 0; j < ima.height; j++) {
@@ -101,7 +101,7 @@ void Frame(Image& ima, const string& filename) {
     ima.saveImage(new_name);
 }
 
-void Flip_Image(Image& ima, const string& filename) {
+/*5*/void Flip_Image(Image& ima, const string& filename) {
     string choosen;
     cout << "Horizontal or Vertical flipping: ";
     cin >> choosen;
@@ -136,7 +136,7 @@ void Flip_Image(Image& ima, const string& filename) {
     }
 }
 
-void Rotate_Image(Image& ima, const string& filename) {
+/*6*/void Rotate_Image(Image& ima, const string& filename) {
     int choice = 0 ;
     cout << "Enter rotation (90, 180, or 270): ";
     cin >> choice;
@@ -181,7 +181,7 @@ void Rotate_Image(Image& ima, const string& filename) {
     }
 }
 
-void Darken_and_Lighten_Image(Image &ima, const string& filename) {
+/*7*/void Darken_and_Lighten_Image(Image &ima, const string& filename) {
     string choosen;
     cout << "Darker or Lighter: ";
     cin >> choosen;
@@ -205,7 +205,7 @@ void Darken_and_Lighten_Image(Image &ima, const string& filename) {
     ima.saveImage(new_name);
 }
 
-void Resizing_Image(Image& ima, const string& filename) {
+/*8*/void Resizing_Image(Image& ima, const string& filename) {
     int width, height;
     char x;
     cout << "Enter the new width and height (e.g., 800 x 600):";
@@ -253,7 +253,7 @@ Image Merge(Image& merged, Image& ima, Image& second_ima) {
     return merged;
 }
 
-void Merge_Images(Image& ima, Image& second_ima, const string& filename) {
+/*9*/void Merge_Images(Image& ima, Image& second_ima, const string& filename) {
     if (ima.width == second_ima.width && ima.height == second_ima.height) {
         Image merged(ima.width, ima.height);
         merged = Merge(merged, ima, second_ima);
@@ -286,7 +286,7 @@ void Merge_Images(Image& ima, Image& second_ima, const string& filename) {
     }
 }
 
-void Edge_Detection(Image& ima, const string& filename) {
+/*10*/void Edge_Detection(Image& ima, const string& filename) {
     Image edge(ima.width, ima.height);
     int threshold = 30;
     for (int i = 1; i < ima.width - 1; i++) {
@@ -312,26 +312,23 @@ void Edge_Detection(Image& ima, const string& filename) {
     edge.saveImage(new_name);
 }
 
-void Blur_Image(Image& ima, int& blur_Level, const string& filename) {
+/*12*/void Blur_Image(Image& ima, int& blur_Level, const string& filename) {
     Image originalImg(ima.width, ima.height);
     originalImg = ima;
-    for (int y = 0; y < ima.height; ++y) {
-        for (int x = 0; x < ima.width; ++x) {
-
+    for (int y = 0; y < ima.height; y++) {
+        for (int x = 0; x < ima.width; x++) {
             long long redSum = 0;
             long long greenSum = 0;
             long long blueSum = 0;
-
             int pixelCount = 0;
-            for (int dy = -blur_Level; dy <= blur_Level; ++dy) {
-                for (int dx = -blur_Level; dx <= blur_Level; ++dx) {
+            for (int dy = -blur_Level; dy <= blur_Level; dy++) {
+                for (int dx = -blur_Level; dx <= blur_Level; dx++) {
                     int neighborX = x + dx;
                     int neighborY = y + dy;
                     if (neighborX >= 0 && neighborX < ima.width && neighborY >= 0 && neighborY < ima.height) {
                         redSum += originalImg(neighborX, neighborY, 0);
                         greenSum += originalImg(neighborX, neighborY, 1);
                         blueSum += originalImg(neighborX, neighborY, 2);
-                        
                         pixelCount++;
                     }
                 }
@@ -345,7 +342,7 @@ void Blur_Image(Image& ima, int& blur_Level, const string& filename) {
     ima.saveImage(new_name);
 }
 
-void Wano_Brightness(Image& ima, const string& filename) {
+/*13*/void Wano_Brightness(Image& ima, const string& filename) {
     int brightness = 50;
     for (int i = 0; i < ima.width; i++) {
         for (int j = 0; j < ima.height; j++) {
@@ -360,7 +357,7 @@ void Wano_Brightness(Image& ima, const string& filename) {
     ima.saveImage(new_name);
 }
 
-void Old_TV_View(Image& ima, const string& filename) {
+/*14*/void Old_TV_View(Image& ima, const string& filename) {
     for (int i = 0; i < ima.width; i++) {
         for (int j = 0; j < ima.height; j++) {
             if (j % 20 == 0 || j % 20 == 1) {
@@ -377,7 +374,21 @@ void Old_TV_View(Image& ima, const string& filename) {
     ima.saveImage(new_name);
 }
 
-void Skewing_Image(Image& ima, float& degree, const string& filename) {
+/*16*/void Infrared_Image(Image& ima, const string& filename) {
+    for (int y = 0; y < ima.height; y++) {
+        for (int x = 0; x < ima.width; x++) {
+            int originalGreen = ima(x, y, 1);
+            int originalBlue = ima(x, y, 2);
+            ima(x, y, 0) = 255;
+            ima(x, y, 1) = 255 - originalGreen;
+            ima(x, y, 2) = 255 - originalBlue;
+        }
+    }
+    string new_name = filenaming(filename);
+    ima.saveImage(new_name);
+}
+
+/*17*/void Skewing_Image(Image& ima, float& degree, const string& filename) {
     float radian = degree * M_PI / 180;
     float tangent = tan(radian);
     int max_shift = abs(ima.height * tangent);
@@ -403,6 +414,52 @@ void Skewing_Image(Image& ima, float& degree, const string& filename) {
     }
     string new_name = filenaming(filename);
     skewed.saveImage(new_name);
+}
+
+/*18*/void Oil_Painting(Image& ima, int& radius, int& levels, const string& filename) {
+    Image originalImg(ima.width, ima.height);
+    originalImg = ima;
+    for (int y = 0; y < ima.height; y++) {
+        for (int x = 0; x < ima.width; x++) {
+            int intensityCount[256] = {0};
+            int redSum[256] = {0};
+            int greenSum[256] = {0};
+            int blueSum[256] = {0};
+            for (int dy = -radius; dy <= radius; dy++) {
+                for (int dx = -radius; dx <= radius; dx++) {
+                    int neighborX = x + dx;
+                    int neighborY = y + dy;
+                    if (neighborX >= 0 && neighborX < ima.width && neighborY >= 0 && neighborY < ima.height) {
+                        int r = originalImg(neighborX, neighborY, 0);
+                        int g = originalImg(neighborX, neighborY, 1);
+                        int b = originalImg(neighborX, neighborY, 2);
+                        int currentIntensity = (r + g + b) / 3;
+                        int mappedBin = (currentIntensity * levels) / 255;
+                        if (mappedBin >= levels) mappedBin = levels - 1;
+                        intensityCount[mappedBin]++;
+                        redSum[mappedBin] += r;
+                        greenSum[mappedBin] += g;
+                        blueSum[mappedBin] += b;
+                    }
+                }
+            }
+            int maxIndex = 0;
+            int maxFrequency = 0;
+            for (int i = 0; i < levels; i++) {
+                if (intensityCount[i] > maxFrequency) {
+                    maxFrequency = intensityCount[i];
+                    maxIndex = i;
+                }
+            }
+            if (maxFrequency > 0) {
+                ima(x, y, 0) = redSum[maxIndex] / maxFrequency;
+                ima(x, y, 1) = greenSum[maxIndex] / maxFrequency;
+                ima(x, y, 2) = blueSum[maxIndex] / maxFrequency;
+            }
+        }
+    }
+    string new_name = filenaming(filename);
+    ima.saveImage(new_name);
 }
 
 int main()
@@ -484,11 +541,23 @@ int main()
         else if (x == 14) {
             Old_TV_View(ima, filename);
         }
+        else if (x == 16) {
+            Infrared_Image(ima, filename);
+        }
         else if (x == 17) {
             cout << "Enter the skewness degree :";
             float degree;
             cin >> degree;
             Skewing_Image(ima, degree, filename);
+        }
+        else if (x == 18) {
+            cout << "Enter brush radius (recommended from 1 to 10) :";
+            int radius;
+            cin >> radius;
+            cout << "Enter intensity levels (recommended from 10 to 50) :";
+            int levels;
+            cin >> levels;
+            Oil_Painting(ima, radius, levels, filename);
         }
         cout << endl << "---Edited successfully---" << endl << endl;
     }
