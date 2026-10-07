@@ -289,31 +289,19 @@ void Merge_Images(Image& ima, Image& second_ima, const string& filename) {
 void Edge_Detection(Image& ima, const string& filename) {
     Image edge(ima.width, ima.height);
     int threshold = 30;
-
-    for (int i = 1; i < ima.width - 1; i++)
-    {
-        for (int j = 1; j < ima.height - 1; j++)
-        {
-            int current =
-                (ima(i,j,0) + ima(i,j,1) + ima(i,j,2)) / 3;
-
-            int right =
-                (ima(i+1,j,0) + ima(i+1,j,1) + ima(i+1,j,2)) / 3;
-
-            int down =
-                (ima(i,j+1,0) + ima(i,j+1,1) + ima(i,j+1,2)) / 3;
-
+    for (int i = 1; i < ima.width - 1; i++) {
+        for (int j = 1; j < ima.height - 1; j++) {
+            int current = (ima(i,j,0) + ima(i,j,1) + ima(i,j,2)) / 3;
+            int right = (ima(i+1,j,0) + ima(i+1,j,1) + ima(i+1,j,2)) / 3
+            int down = (ima(i,j+1,0) + ima(i,j+1,1) + ima(i,j+1,2)) / 3;
             int diffRight = abs(current - right);
             int diffDown = abs(current - down);
-
-            if (diffRight > threshold || diffDown > threshold)
-            {
+            if (diffRight > threshold || diffDown > threshold) {
                 edge(i,j,0) = 0;
                 edge(i,j,1) = 0;
                 edge(i,j,2) = 0;
             }
-            else
-            {
+            else {
                 edge(i,j,0) = 255;
                 edge(i,j,1) = 255;
                 edge(i,j,2) = 255;
