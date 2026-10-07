@@ -339,6 +339,23 @@ void Wano_Brightness(Image& ima, const string& filename) {
     ima.saveImage(new_name);
 }
 
+void Old_TV_View(Image& ima, const string& filename) {
+    for (int i = 0; i < ima.width; i++) {
+        for (int j = 0; j < ima.height; j++) {
+            if (j % 20 == 0 || j % 20 == 1) {
+                ima(i, j, 0) = ima(i, j, 0) * 0.5;
+                ima(i, j, 1) = imai, j, 1) * 0.5;
+                ima(i, j, 2) = ima(i, j, 2) * 0.5;
+            }
+            if (i % 10 == 0) {
+                ima(i, j, 0) = min(255, ima(i, j, 0) + 10);
+            }
+        }
+    }
+    string new_name = filenaming(filename);
+    ima.saveImage(new_name);
+}
+
 void Skewing_Image(Image& ima, float& degree, const string& filename) {
     float radian = degree * M_PI / 180;
     float tangent = tan(radian);
@@ -436,6 +453,9 @@ int main()
         }
         else if (x == 13) {
             Wano_Brightness(ima, filename);
+        }
+        else if (x == 14) {
+            Old_TV_View(ima, filename);
         }
         else if (x == 17) {
             cout << "Enter the skewness degree :";
