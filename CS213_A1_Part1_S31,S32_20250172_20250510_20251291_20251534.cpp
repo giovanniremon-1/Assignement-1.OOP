@@ -308,6 +308,35 @@ Image Merge(Image& merged, Image& ima, Image& second_ima) {
     edge.saveImage(new_name);
 }
 
+/*11*/void crop_image (Image& ima, const string& filename) {
+    int x, y, W, H;
+
+    cout << "Enter starting point x and y: ";
+    cin >> x >> y;
+    cout << "Enter width and height: ";
+    cin >> W >> H;
+
+    while (x < 0 || y < 0 || W <= 0 || H <= 0 || (x + W) > ima.width || (y + H) > ima.height ) {
+        cout << "The dimensions are missing" << endl;
+        cout << "Enter starting point x and y: ";
+        cin >> x >> y;
+        cout << "Enter width and height: ";
+        cin >> W >> H;
+
+    }
+    Image cropped(W, H);
+    for (int i = 0; i < W; i++) {
+        for (int j = 0; j < H; j++) {
+            for (int k = 0; k < ima.channels; k++) {
+
+                cropped(i, j, k) = ima(x + i, y + j, k);
+            }
+        }
+    }
+    string new_name = filenaming(filename);
+    cropped.saveImage(new_name);
+}
+
 /*12*/void Blur_Image(Image& ima, int& blur_Level, const string& filename) {
     Image originalImg(ima.width, ima.height);
     originalImg = ima;
@@ -525,6 +554,7 @@ int main()
         else if (x == 10) {
             Edge_Detection(ima, filename);
         }
+
         else if (x == 12) {
             cout << "Enter the blur level :";
             int blur_level;
