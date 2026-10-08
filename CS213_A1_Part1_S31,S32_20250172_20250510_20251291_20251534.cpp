@@ -399,6 +399,16 @@ Image Merge(Image& merged, Image& ima, Image& second_ima) {
     ima.saveImage(new_name);
 }
 
+/*15*/void purple_Image(Image &ima, const string& filename ) {
+    for (int i = 0; i< ima.width; i++) {
+        for (int j = 0; j< ima.height; j++) {
+            ima(i, j, 1) = ima(i, j, 1) * 0.5;
+        }
+    }
+    string new_name = filenaming(filename);
+    ima.saveImage(new_name);
+}
+
 /*16*/void Infrared_Image(Image& ima, const string& filename) {
     for (int y = 0; y < ima.height; y++) {
         for (int x = 0; x < ima.width; x++) {
@@ -568,6 +578,9 @@ int main()
         }
         else if (x == 14) {
             Old_TV_View(ima, filename);
+        }
+        else if (x == 15) {
+            purple_Image(ima, filename);
         }
         else if (x == 16) {
             Infrared_Image(ima, filename);
