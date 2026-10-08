@@ -308,7 +308,7 @@ Image Merge(Image& merged, Image& ima, Image& second_ima) {
     edge.saveImage(new_name);
 }
 
-/*11*/void crop_image (Image& ima, const string& filename) {
+/*11*/void Crop_Image(Image& ima, const string& filename) {
     int x, y, W, H;
 
     cout << "Enter starting point x and y: ";
@@ -554,7 +554,9 @@ int main()
         else if (x == 10) {
             Edge_Detection(ima, filename);
         }
-
+        else if (x == 11) {
+            Crop_Image(ima, filename);
+        }
         else if (x == 12) {
             cout << "Enter the blur level :";
             int blur_level;
