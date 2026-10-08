@@ -310,19 +310,16 @@ Image Merge(Image& merged, Image& ima, Image& second_ima) {
 
 /*11*/void Crop_Image(Image& ima, const string& filename) {
     int x, y, W, H;
-
     cout << "Enter starting point x and y: ";
     cin >> x >> y;
     cout << "Enter width and height: ";
     cin >> W >> H;
-
     while (x < 0 || y < 0 || W <= 0 || H <= 0 || (x + W) > ima.width || (y + H) > ima.height ) {
         cout << "The dimensions are missing" << endl;
         cout << "Enter starting point x and y: ";
         cin >> x >> y;
         cout << "Enter width and height: ";
         cin >> W >> H;
-
     }
     Image cropped(W, H);
     for (int i = 0; i < W; i++) {
