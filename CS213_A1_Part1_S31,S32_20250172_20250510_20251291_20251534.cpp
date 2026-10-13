@@ -6,7 +6,7 @@ FCAI – OOP Assignment 1 – 2026/2027
     - Member 2: Mathieu Zaher       20250510    filters: 2, 6, 10, 14
     - Member 3: Karim Tarek         20251291    filters: 3, 7, 11, 15
     - Member 4: Retage Walid        20251534    filters: 4, 8, 12, 16
-  Lab: S31,S32
+  Lab: S24,S25
 */
 
 #include <string>
