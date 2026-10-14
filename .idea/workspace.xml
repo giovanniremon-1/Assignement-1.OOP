@@ -32,9 +32,7 @@
     <list default="true" id="610d0381-559a-478a-9009-12bf4b8fc123" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CS213_A1_Part1_S31,S32_20250172_20250510_20251291_20251534.exe" beforeDir="false" afterPath="$PROJECT_DIR$/CS213_A1_Part1_S31,S32_20250172_20250510_20251291_20251534.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/building-2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/building-2.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/luffy-2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/luffy-2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toy1-2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/toy1-2.jpg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -229,7 +227,7 @@
       <workItem from="1791282127824" duration="6919000" />
       <workItem from="1791906567568" duration="751000" />
       <workItem from="1791907327899" duration="956000" />
-      <workItem from="1791923009410" duration="695000" />
+      <workItem from="1791923009410" duration="2721000" />
     </task>
     <servers />
   </component>

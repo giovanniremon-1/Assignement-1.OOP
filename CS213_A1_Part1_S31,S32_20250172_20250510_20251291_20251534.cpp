@@ -7,6 +7,9 @@ FCAI – OOP Assignment 1 – 2026/2027
     - Member 3: Karim Tarek         20251291    filters: 3, 7, 11, 15
     - Member 4: Retage Walid        20251534    filters: 4, 8, 12, 16
   Lab: S24,S25
+  Document :https://docs.google.com/document/d/1UQXltEPZrrFwY_jWWhR1-rdJ5TGXpFmmn0TRJ8M76P8/edit?usp=sharing
+  GitHub-repo :https://github.com/giovanniremon-1/Assignement-1.OOP.git
+  Video :https://drive.google.com/drive/folders/1OGlm5MukYhPqFEkN9oOqMbHJUgx10zdh?usp=sharing
 */
 
 #include <string>
