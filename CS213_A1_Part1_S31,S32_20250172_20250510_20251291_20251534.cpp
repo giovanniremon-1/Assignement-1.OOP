@@ -2,7 +2,7 @@
 FCAI – OOP Assignment 1 – 2026/2027
   Program Name: Image Processing Application
   Team Members:
-    - Member 1: Geovanni Raymond    20250172    filters: 1, 5, 9, 13
+    - Member 1: Geovanni Raymond    20250172    filters: 1, 5, 9, 13    MENU
     - Member 2: Mathieu Zaher       20250510    filters: 2, 6, 10, 14
     - Member 3: Karim Tarek         20251291    filters: 3, 7, 11, 15
     - Member 4: Retage Walid        20251534    filters: 4, 8, 12, 16
