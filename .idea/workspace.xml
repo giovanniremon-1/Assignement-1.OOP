@@ -29,9 +29,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="610d0381-559a-478a-9009-12bf4b8fc123" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/CS213_A1_Part1_S31,S32_20250172_20250510_20251291_20251534.cpp" beforeDir="false" />
-    </list>
+    <list default="true" id="610d0381-559a-478a-9009-12bf4b8fc123" name="Changes" comment="updated header and file name" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -227,8 +225,25 @@
       <workItem from="1791907327899" duration="956000" />
       <workItem from="1791923009410" duration="2721000" />
       <workItem from="1792008299716" duration="734000" />
-      <workItem from="1792441297603" duration="3336000" />
+      <workItem from="1792441297603" duration="3951000" />
     </task>
+    <task id="LOCAL-00001" summary="updated header and file name">
+      <option name="closed" value="true" />
+      <created>1792487622424</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1792487622424</updated>
+    </task>
+    <task id="LOCAL-00002" summary="updated header and file name">
+      <option name="closed" value="true" />
+      <created>1792487665073</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1792487665073</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -249,5 +264,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="updated header and file name" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated header and file name" />
   </component>
 </project>
