@@ -29,7 +29,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="610d0381-559a-478a-9009-12bf4b8fc123" name="Changes" comment="" />
+    <list default="true" id="610d0381-559a-478a-9009-12bf4b8fc123" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/CS213_A1_Part1_S31,S32_20250172_20250510_20251291_20251534.cpp" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -225,6 +227,7 @@
       <workItem from="1791907327899" duration="956000" />
       <workItem from="1791923009410" duration="2721000" />
       <workItem from="1792008299716" duration="734000" />
+      <workItem from="1792441297603" duration="3336000" />
     </task>
     <servers />
   </component>
